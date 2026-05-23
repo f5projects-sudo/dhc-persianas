@@ -10,14 +10,14 @@
     
     const WIDGET_ID = 'f5-chat-widget';
     const STYLES = `
-        #${WIDGET_ID} {
-            --primary: #0052cc;
-            --primary-light: #e8f0ff;
-            --secondary: #666;
-            --bg: #fff;
-            --border: #d0d0d0;
-            --text: #333;
-            --text-light: #999;
+        :root {
+            --f5-primary: #0052cc;
+            --f5-primary-light: #e8f0ff;
+            --f5-secondary: #666;
+            --f5-bg: #fff;
+            --f5-border: #d0d0d0;
+            --f5-text: #333;
+            --f5-text-light: #999;
         }
 
         #${WIDGET_ID}-trigger {
@@ -27,7 +27,7 @@
             width: 56px;
             height: 56px;
             border-radius: 50%;
-            background: var(--primary);
+            background: var(--f5-primary);
             color: white;
             border: none;
             cursor: pointer;
@@ -63,6 +63,7 @@
             z-index: 9999;
             animation: slideUp 0.3s ease;
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            color: var(--f5-text);
         }
 
         .f5-chat-window.hidden {
@@ -81,7 +82,7 @@
         }
 
         .f5-chat-header {
-            background: linear-gradient(135deg, var(--primary) 0%, #004494 100%);
+            background: linear-gradient(135deg, var(--f5-primary) 0%, #004494 100%);
             color: white;
             padding: 16px;
             border-radius: 12px 12px 0 0;
@@ -150,14 +151,14 @@
         }
 
         .f5-chat-message.user .f5-chat-bubble {
-            background: var(--primary);
+            background: var(--f5-primary);
             color: white;
             border-radius: 18px 18px 4px 18px;
         }
 
         .f5-chat-message.bot .f5-chat-bubble {
             background: #e8e8e8;
-            color: var(--text);
+            color: var(--f5-text);
             border-radius: 18px 18px 18px 4px;
         }
 
@@ -190,7 +191,7 @@
         }
 
         .f5-chat-input-area {
-            border-top: 1px solid var(--border);
+            border-top: 1px solid var(--f5-border);
             padding: 12px;
             background: white;
             display: flex;
@@ -201,30 +202,30 @@
         .f5-chat-input {
             flex: 1;
             padding: 10px 14px;
-            border: 1px solid var(--border);
+            border: 1px solid var(--f5-border);
             border-radius: 8px;
             font-size: 14px;
             background: white;
-            color: var(--text);
+            color: var(--f5-text);
             font-family: inherit;
             transition: border-color 0.2s;
         }
 
         .f5-chat-input:focus {
             outline: none;
-            border-color: var(--primary);
+            border-color: var(--f5-primary);
             box-shadow: 0 0 0 2px rgba(0, 82, 204, 0.1);
         }
 
         .f5-chat-input::placeholder {
-            color: var(--text-light);
+            color: var(--f5-text-light);
         }
 
         .f5-chat-send {
             padding: 10px 16px;
             border: none;
             border-radius: 8px;
-            background: var(--primary);
+            background: var(--f5-primary);
             color: white;
             cursor: pointer;
             font-size: 16px;
