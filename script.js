@@ -101,4 +101,18 @@ document.addEventListener('DOMContentLoaded', () => {
             slides[currentSlide].classList.add('active');
         }, 5000); // Change slide every 5 seconds
     }
+
+    // Accordion Logic (Mobile & Desktop)
+    const accordionPanels = document.querySelectorAll('.accordion-panel');
+    if (accordionPanels.length > 0) {
+        const activatePanel = function() {
+            accordionPanels.forEach(p => p.classList.remove('active-panel'));
+            this.classList.add('active-panel');
+        };
+        
+        accordionPanels.forEach(panel => {
+            panel.addEventListener('click', activatePanel);
+            panel.addEventListener('mouseenter', activatePanel);
+        });
+    }
 });
