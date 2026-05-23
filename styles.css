@@ -659,6 +659,83 @@ a {
 }
 
 /* =========================================
+   CONTACT FORM
+   ========================================= */
+.contact-section {
+    background-color: var(--black);
+    color: var(--white);
+    border-top: 1px solid var(--gray-900);
+}
+
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+}
+
+.contact-info .section-title {
+    margin-bottom: 1.5rem;
+}
+
+.contact-info .section-desc {
+    margin-bottom: 2.5rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.contact-info .contact-list {
+    margin-bottom: 0;
+}
+
+.contact-info .contact-list li {
+    font-size: 1.1rem;
+    margin-bottom: 1.2rem;
+}
+
+.contact-form {
+    background-color: var(--gray-900);
+    padding: 3rem;
+    border-radius: 16px;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-control {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: var(--white);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    transition: all var(--transition-normal);
+    box-sizing: border-box;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+.form-control::placeholder {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+textarea.form-control {
+    resize: vertical;
+}
+
+.btn-block {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+/* =========================================
    RESPONSIVE
    ========================================= */
 @media (max-width: 992px) {
@@ -770,4 +847,7 @@ a {
     .hero-actions .btn { width: 100%; }
     .hero-title { font-size: 2.5rem; }
     .section-title { font-size: 2.2rem; }
+    
+    .contact-wrapper { grid-template-columns: 1fr; gap: 3rem; text-align: center; }
+    .contact-form { padding: 2rem 1.5rem; }
 }

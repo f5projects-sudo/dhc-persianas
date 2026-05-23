@@ -168,26 +168,52 @@
     </section>
 
     <!-- Footer & Contact -->
-    <footer id="contacto" class="footer">
+    <!-- Contact Section -->
+    <section id="contacto" class="contact-section section-padding">
         <div class="container">
-            <div class="footer-grid">
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h2 class="section-title">Hablemos de tu proyecto</h2>
+                    <p class="section-desc text-gray">Déjanos tus datos y un asesor se pondrá en contacto contigo para brindarte una cotización personalizada sin compromiso.</p>
+                    <ul class="contact-list">
+                        <li><i class="ph ph-phone"></i> +52 (XXX) XXX-XXXX</li>
+                        <li><i class="ph ph-envelope-simple"></i> info@dhcpersianas.com</li>
+                        <li><i class="ph ph-map-pin"></i> Jalisco, México</li>
+                    </ul>
+                </div>
+                <div class="contact-form-container">
+                    <form class="contact-form" action="#" method="POST">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Tu Nombre Completo" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Tu Correo Electrónico" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" class="form-control" placeholder="Tu Teléfono (Opcional)">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" rows="4" placeholder="Cuéntanos qué persianas o cortinas buscas..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Enviar Mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid" style="grid-template-columns: 1fr auto; align-items: center;">
                 <div class="footer-brand">
                     <div class="logo">
                         <span class="logo-bold text-white">DHC</span>
                         <span class="logo-light text-gray">PERSIANAS & CORTINAS</span>
                     </div>
-                    <p class="footer-desc">Soluciones a la medida para vestir tus ventanas con elegancia y estilo moderno.</p>
-                </div>
-                <div class="footer-contact">
-                    <h4 class="footer-title">Contacto</h4>
-                    <ul class="contact-list">
-                        <li><i class="ph ph-phone"></i> ¡Contáctanos para tu cotización!</li>
-                        <li><i class="ph ph-envelope-simple"></i> info@dhcpersianas.com</li>
-                        <li><i class="ph ph-map-pin"></i> Jalisco, México</li>
-                    </ul>
+                    <p class="footer-desc" style="max-width: 400px;">Soluciones a la medida para vestir tus ventanas con elegancia y estilo moderno.</p>
                 </div>
                 <div class="footer-social">
-                    <h4 class="footer-title">Síguenos</h4>
                     <div class="social-links">
                         <a href="#" class="social-btn"><i class="ph ph-instagram-logo"></i></a>
                         <a href="#" class="social-btn"><i class="ph ph-facebook-logo"></i></a>
