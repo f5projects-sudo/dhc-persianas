@@ -821,33 +821,27 @@ textarea.form-control {
     border: 2px solid rgba(0, 168, 255, 0.3);
 }
 
-.alexa-ring {
+.alexa-draw-ring {
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-radius: 50%;
-    border: 3px solid transparent;
-    background: linear-gradient(45deg, transparent, rgba(0, 168, 255, 0.1), transparent);
-    box-shadow: 0 0 30px rgba(0, 168, 255, 0.5), inset 0 0 20px rgba(0, 168, 255, 0.3);
-    animation: alexa-pulse 3s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+    z-index: 5;
+    pointer-events: none;
 }
 
-.alexa-ring.delay-1 { animation-delay: 1s; }
-.alexa-ring.delay-2 { animation-delay: 2s; }
+.draw-circle {
+    stroke-dasharray: 754;
+    stroke-dashoffset: 754;
+    animation: alexa-draw 3.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    filter: drop-shadow(0 0 12px #00a8ff);
+}
 
-@keyframes alexa-pulse {
-    0% {
-        transform: scale(0.8);
-        opacity: 0.8;
-        border-color: rgba(0, 168, 255, 0.8);
-    }
-    100% {
-        transform: scale(1.5);
-        opacity: 0;
-        border-color: rgba(0, 168, 255, 0);
-    }
+@keyframes alexa-draw {
+    0% { stroke-dashoffset: 754; opacity: 0; }
+    15% { opacity: 1; }
+    75% { stroke-dashoffset: 0; opacity: 1; }
+    100% { stroke-dashoffset: 0; opacity: 0; }
 }
 
 .smart-home-content {
