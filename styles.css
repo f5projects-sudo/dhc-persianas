@@ -991,9 +991,11 @@ textarea.form-control {
     }
     .gallery-item, 
     .gallery-item:nth-child(2n), 
-    .gallery-item:nth-child(5n) { 
-        grid-column: span 1; 
-        grid-row: auto; 
+    .gallery-item:nth-child(5n),
+    .gallery-item.featured-item,
+    .gallery-item:last-child { 
+        grid-column: 1 / -1 !important; 
+        grid-row: auto !important; 
         aspect-ratio: 4/3; 
     }
     
