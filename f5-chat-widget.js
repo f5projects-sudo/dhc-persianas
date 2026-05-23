@@ -11,8 +11,8 @@
     const WIDGET_ID = 'f5-chat-widget';
     const STYLES = `
         :root {
-            --f5-primary: #0052cc;
-            --f5-primary-light: #e8f0ff;
+            --f5-primary: #1a1a1a;
+            --f5-primary-light: #e8e8e8;
             --f5-secondary: #666;
             --f5-bg: #fff;
             --f5-border: #d0d0d0;
@@ -82,7 +82,7 @@
         }
 
         .f5-chat-header {
-            background: linear-gradient(135deg, var(--f5-primary) 0%, #004494 100%);
+            background: linear-gradient(135deg, #2a2a2a 0%, #000000 100%);
             color: white;
             padding: 16px;
             border-radius: 12px 12px 0 0;
@@ -289,7 +289,7 @@
         window.className = 'f5-chat-window hidden';
         window.innerHTML = `
             <div class="f5-chat-header">
-                <h3>F5 Networking</h3>
+                <h3 style="line-height: 1.2;">DHC<br><span style="font-size: 0.65em; font-weight: 400; letter-spacing: 1px;">PERSIANAS & CORTINAS</span></h3>
                 <button class="f5-chat-close" aria-label="Cerrar chat">✕</button>
             </div>
             <div class="f5-chat-messages" id="f5-messages">
