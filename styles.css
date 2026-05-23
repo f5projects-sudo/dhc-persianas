@@ -665,40 +665,30 @@ a {
     
     .accordion-gallery {
         flex-direction: column;
-        height: auto;
+        height: 750px;
     }
     
     .accordion-panel {
-        height: 150px;
-        flex: none !important;
-        align-items: center;
-        justify-content: center;
+        align-items: flex-end;
+        justify-content: flex-start;
         border-radius: 12px;
     }
     
-    .accordion-panel.active-panel,
-    .accordion-panel:hover {
-        height: 150px;
-    }
-    
     .panel-title-vertical {
-        bottom: auto;
-        left: auto;
-        transform: none;
+        bottom: 50%;
+        left: 50%;
+        transform: translate(-50%, 50%);
         text-align: center;
         width: 100%;
-        position: relative;
         font-size: 1.8rem;
     }
     
-    .accordion-panel:hover .panel-title-vertical,
-    .accordion-panel.active-panel .panel-title-vertical {
-        opacity: 1;
-        pointer-events: auto;
+    .panel-content {
+        padding: 2rem;
     }
     
-    .panel-content {
-        display: none;
+    .panel-title {
+        font-size: 2.2rem;
     }
 }
 
