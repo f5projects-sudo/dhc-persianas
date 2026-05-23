@@ -484,6 +484,11 @@ a {
     grid-row: span 2;
 }
 
+.gallery-item:last-child {
+    grid-column: 1 / -1;
+    grid-row: span 2;
+}
+
 .gallery-item img,
 .gallery-item video {
     width: 100%;
