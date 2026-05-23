@@ -286,7 +286,7 @@
 
         const window = document.createElement('div');
         window.className = 'f5-chat-window hidden';
-        window.innerHTML = \`
+        window.innerHTML = `
             <div class="f5-chat-header">
                 <h3>F5 Networking</h3>
                 <button class="f5-chat-close" aria-label="Cerrar chat">✕</button>
@@ -308,7 +308,7 @@
                 />
                 <button class="f5-chat-send" id="f5-send" aria-label="Enviar">➤</button>
             </div>
-        \`;
+        `;
 
         document.body.appendChild(trigger);
         document.body.appendChild(window);
@@ -337,7 +337,7 @@
 
         function addMessage(text, isUser) {
             const msg = document.createElement('div');
-            msg.className = \`f5-chat-message \${isUser ? 'user' : 'bot'}\`;
+            msg.className = `f5-chat-message ${isUser ? 'user' : 'bot'}`;
 
             const bubble = document.createElement('div');
             bubble.className = 'f5-chat-bubble';
