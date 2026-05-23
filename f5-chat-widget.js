@@ -323,6 +323,18 @@
         const sendBtn = window.querySelector('#f5-send');
         let isLoading = false;
         let conversationHistory = [];
+        
+        // Generar un ID de sesión único para identificar la conversación en n8n
+        const generateUUID = () => {
+            if (window.crypto && crypto.randomUUID) {
+                return crypto.randomUUID();
+            }
+            return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+                const r = Math.random() * 16 | 0, v = c === 'x' ? r : (r & 0x3 | 0x8);
+                return v.toString(16);
+            });
+        };
+        const sessionId = generateUUID();
 
         function toggleWindow() {
             window.classList.toggle('hidden');
@@ -393,8 +405,9 @@
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({
-                        chatInput: message,
                         action: 'sendMessage',
+                        sessionId: sessionId,
+                        chatInput: message,
                         conversationHistory: conversationHistory
                     })
                 });
