@@ -12,7 +12,7 @@
     <!-- Phosphor Icons -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="styles.css?v=3.3">
+    <link rel="stylesheet" href="styles.css?v=3.4">
 </head>
 <body>
     <!-- Navbar -->
@@ -115,12 +115,13 @@
     <section class="smart-home-section">
         <div class="smart-home-container">
             <div class="alexa-glow-container">
-                <svg class="alexa-draw-ring" width="250" height="250" viewBox="0 0 250 250">
-                    <circle cx="125" cy="125" r="120" fill="none" stroke="rgba(0, 168, 255, 0.1)" stroke-width="2" />
-                    <circle class="draw-circle" cx="125" cy="125" r="120" fill="none" stroke="#00a8ff" stroke-width="4" stroke-linecap="round" />
+                <svg class="alexa-draw-ring" width="300" height="300" viewBox="0 0 300 300">
+                    <circle cx="150" cy="150" r="120" fill="none" stroke="rgba(0, 168, 255, 0.1)" stroke-width="2" />
+                    <circle class="draw-circle" cx="150" cy="150" r="120" fill="none" stroke="#00a8ff" stroke-width="4" stroke-linecap="round" />
                 </svg>
-                <div class="alexa-icon">
-                    <img src="assets/images/alexa-logo.svg" alt="Alexa Oficial" style="width: 130px; filter: drop-shadow(0 0 10px rgba(0, 168, 255, 0.8));">
+                <div class="alexa-icon" style="background: transparent; border: none; box-shadow: none;">
+                    <!-- Filtro CSS para convertir el logo oscuro a color Cyan puro brillante -->
+                    <img src="assets/images/alexa-logo.svg" alt="Alexa Oficial" style="width: 140px; filter: invert(53%) sepia(87%) saturate(3015%) hue-rotate(174deg) brightness(101%) contrast(106%) drop-shadow(0 0 8px rgba(0, 168, 255, 0.6));">
                 </div>
             </div>
             <div class="smart-home-content">
