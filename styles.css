@@ -219,6 +219,12 @@ a {
     z-index: 1001;
 }
 
+.nav-alexa-logo {
+    height: 22px;
+    filter: invert(53%) sepia(87%) saturate(3015%) hue-rotate(174deg) brightness(101%) contrast(106%) drop-shadow(0 0 5px rgba(0, 168, 255, 0.4));
+    transition: height var(--transition-fast);
+}
+
 .mobile-toggle {
     display: none;
     background: none;
@@ -978,6 +984,10 @@ textarea.form-control {
     
     .nav-links a {
         font-size: 1.5rem;
+    }
+    
+    .nav-alexa-logo {
+        height: 14px; /* Mucho más pequeño en celular */
     }
     
     .mobile-only-btn {
