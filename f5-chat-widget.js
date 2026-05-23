@@ -22,27 +22,29 @@
 
         #${WIDGET_ID}-trigger {
             position: fixed;
-            bottom: 35px;
-            right: 110px; /* A un lado del botón de WhatsApp */
-            width: 56px;
-            height: 56px;
+            bottom: 30px; /* Igual que WhatsApp */
+            right: 110px; /* Al lado de WhatsApp */
+            width: 65px; /* Mismo tamaño que WhatsApp */
+            height: 65px;
             border-radius: 50%;
-            background: var(--f5-primary);
-            color: white;
-            border: none;
+            background: #121212; /* Oscuro premium */
+            color: #d4af37; /* Dorado accent */
+            border: 1px solid rgba(212, 175, 55, 0.5); /* Borde dorado sutil */
             cursor: pointer;
-            box-shadow: 0 4px 12px rgba(0, 82, 204, 0.4);
-            font-size: 24px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+            font-size: 32px; /* Ícono grande */
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: all 0.3s ease;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             z-index: 9998;
         }
 
         #${WIDGET_ID}-trigger:hover {
-            transform: scale(1.1);
-            box-shadow: 0 6px 20px rgba(0, 82, 204, 0.5);
+            transform: translateY(-5px) scale(1.05); /* Misma animación que WA */
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.25);
+            background: #1a1a1a;
+            border-color: #d4af37;
         }
 
         #${WIDGET_ID}-trigger.open {
@@ -282,7 +284,7 @@
         // Crear elementos
         const trigger = document.createElement('button');
         trigger.id = `${WIDGET_ID}-trigger`;
-        trigger.innerHTML = '💬';
+        trigger.innerHTML = '<i class="ph-fill ph-chat-circle-dots"></i>';
         trigger.setAttribute('aria-label', 'Abrir chat');
 
         const window = document.createElement('div');
