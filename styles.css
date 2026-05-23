@@ -736,6 +736,42 @@ textarea.form-control {
 }
 
 /* =========================================
+   FLOATING WHATSAPP
+   ========================================= */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 65px;
+    height: 65px;
+    background-color: #25d366;
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.2rem;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.4);
+    z-index: 9999;
+    transition: all var(--transition-fast);
+    animation: pulse-wa 2.5s infinite;
+    text-decoration: none;
+}
+
+.whatsapp-float:hover {
+    background-color: #128c7e;
+    transform: translateY(-5px) scale(1.05);
+    color: var(--white);
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes pulse-wa {
+    0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+    70% { box-shadow: 0 0 0 20px rgba(37, 211, 102, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+/* =========================================
    RESPONSIVE
    ========================================= */
 @media (max-width: 992px) {
